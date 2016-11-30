@@ -1,3 +1,14 @@
 # CMPT231
 ## Lecture 13: ch34
-### Tractibility, Semester Review
+### Tractability, Semester Review
+
+---
+## Devotional
+
+---
+## Outline for today
++ All-Pairs Shortest Path
+  + Johnson's 
++ Tractability
+
+---
