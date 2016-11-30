@@ -64,3 +64,31 @@ def Johnson( G, w ):
 
 ---
 ## Outline
+
+---
+## Tractability
+
+---
+## Outline
+
+---
+## Semester overview
++ **Complexity**, &Theta; O &Omega; o &omega;
+  *(ch1-3)*
++ **Sorting**
+  + Merge sort
+  + Heap sort
+  + Quick sort
++ **Data Structures**
+  + Linked lists
+  + Trees, binary search trees
+  + B-trees
++ **Graph Algorithms**
+  + Spanning trees
+  + Single-source shortest paths
+  + All-pairs shortest paths
+
+---
+## Outline
+
+---
