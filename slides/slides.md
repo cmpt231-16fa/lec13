@@ -8,7 +8,7 @@
 ---
 ## Outline for today
 + All-Pairs Shortest Path
-  + Johnson's 
+  + Johnson's
 + Tractability
 + Semester Review
 
@@ -67,6 +67,7 @@ def Johnson( G, w ):
 
 ---
 ## Tractability
++ [MIT 6.890: Fun with Hardness Proofs](http://courses.csail.mit.edu/6.890/fall14/)
 
 ---
 ## Outline
