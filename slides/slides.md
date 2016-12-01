@@ -7,10 +7,14 @@
 
 ---
 ## Outline for today
-+ All-Pairs Shortest Path
-  + Johnson's
++ All-pairs shortest path
+  + Johnson (reweighted Dijkstra): \`O(|V|^2 log |V| + |V| |E|)\`
 + Tractability
-+ Semester Review
+  + Complexity classes: *P*, *EXP*, *R*
+  + Non-deterministic verification: *NP*
+  + Reductions
+  + NP-hard and NP-complete
++ Semester review
 
 ---
 ## All-pairs shortest path
@@ -66,7 +70,39 @@ def Johnson( G, w ):
 ## Outline
 
 ---
-## Tractability
+## Complexity classes
++ Decision problems
++ *P*:
++ *EXP*:
++ *R*:
+
+---
+## Examples
+
+---
+## Turing machine
++ Computational model
+
+---
+## Undecidability
++ Halting problem
+
+---
+## NP
++ Verification algorithm
++ Nondeterministic Turing machine
+
+---
+## Reductions
+
+---
+## NP-hard and NP-complete
+
+---
+## P =? NP
+
+---
+## For further reading
 + [MIT 6.890: Fun with Hardness Proofs](http://courses.csail.mit.edu/6.890/fall14/)
 
 ---
@@ -75,19 +111,21 @@ def Johnson( G, w ):
 ---
 ## Semester overview
 + **Complexity**, &Theta; O &Omega; o &omega;
-  *(ch1-3)*
-+ **Sorting**
-  + Merge sort
-  + Heap sort
-  + Quick sort
-+ **Data Structures**
-  + Linked lists
-  + Trees, binary search trees
-  + B-trees
-+ **Graph Algorithms**
-  + Spanning trees
-  + Single-source shortest paths
-  + All-pairs shortest paths
+  *(ch1-5)*
+  + Recurrences, induction
++ **Sorting** *(ch4-8)*
+  + Comparison sorts: insert, merge, heap, quick
+  + Linear sorts: counting, radix, bucket
++ **Data Structures** *(ch10-12,18)*
+  + Hash tables
+  + Linked lists, BSTs, B-trees
++ **Divide and Conquer** *(ch15-16)*
+  + Dynamic prog: rod cut, matrix-chain, LCS, opt BST
+  + Greedy: act sel, list merge, Huffman, frac knapsack
++ **Graph Algorithms** *(ch22-25)*
+  + Spanning trees: Kruskal, Prim
+  + Single-source shortest paths: Bellman-Ford, Dijkstra
+  + All-pairs shortest paths: Floyd-Warshall, Johnson
 
 ---
 ## Outline
