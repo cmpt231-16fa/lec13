@@ -97,7 +97,7 @@ def Johnson( G, w ):
 ---
 ## Complexity classes
 + *P*: decision problems for which **polynomial-time** algorithms exist
-  + Most of the algorithms in this course! \`O(n^c)\`
+  + **Most** of the algorithms in this course! \`O(n^c)\`
 + *EXP*: problems solvable in **exponential** time: \`O(2^(n^c))\`
 + *R*: problems solvable in **finite** time
   + R = "**recursive**" (Turing 1936, Church 1941)
@@ -107,14 +107,14 @@ def Johnson( G, w ):
 ---
 ## Examples
 + Does a weighted graph have a **net-negative cycle**?
-  + In **P**: *Bellman-Ford* \`O(|V||E|) = O(n^2)\`
+  + In **P**: e.g., *Bellman-Ford* \`O(|V||E|) = O(n^2)\`
 + Given a **chess** board configuration (n x n), can White **win**?
-  + In **EXP** but not in **P**
-+ Given a **Tetris** board and sequence of pieces, can you **survive**?
+  + In **EXP** (exhaustive search) but not in **P**
++ Given a **Tetris** board + seq of pieces, can you **survive**?
   + In **EXP** but not *known* whether in **P**
 + Given a computer **program**, does it ever **halt**?
   + [Uncomputable](https://en.wikipedia.org/wiki/Halting_problem)! (&notin; *R*)
-  + No algorithm can solve this in *finite* time for **all** programs, for **all** inputs
+  + **No** algorithm can solve this in *finite* time for **all** programs, for **all** inputs
 
 ---
 ## Turing machine
@@ -147,20 +147,20 @@ def Johnson( G, w ):
 
 ---
 ## Semester overview
-+ **Complexity**, &Theta; O &Omega; o &omega;, recurrence, induction
-  *(ch1-5)*
-+ **Sorting** *(ch4-8)*
-  + Comparison sorts: insert, merge, heap, quick
-  + Linear sorts: counting, radix, bucket
-+ **Data Structures** *(ch10-12,18)*
-  + Hash tables, linked lists, BSTs, B-trees
-+ **Divide and Conquer** *(ch15-16)*
-  + Dynamic prog: rod cut, matrix-chain, LCS, opt BST
-  + Greedy: act sel, list merge, Huffman, frac knapsack
-+ **Graph Algorithms** *(ch22-25)*
-  + Spanning trees: Kruskal, Prim
-  + Single-source shortest paths: Bellman-Ford, Dijkstra
-  + All-pairs shortest paths: Floyd-Warshall, Johnson
++ **Complexity**: *&Theta; O &Omega; o &omega;*, recurrence, induction
+  <span class="ref">(ch1-5)</span>
++ **Sorting**  <span class="ref">(ch4-8)</span>
+  + Comparison sorts: *insert*, *merge*, *heap*, *quick*
+  + Linear sorts: *counting*, *radix*, *bucket*
++ **Data Structures**  <span class="ref">(ch10-12, 18)</span>
+  + *Hash* tables, linked *lists*, *BST*s, *B-trees*
++ **Divide and Conquer**  <span class="ref">(ch15-16)</span>
+  + Dynamic prog: *rod* cut, *matrix*-chain, *LCS*, opt *BST*
+  + Greedy: *act* sel, list *merge*, *Huffman*, frac *knapsack*
++ **Graph Algorithms**  <span class="ref">(ch22-25)</span>
+  + Spanning trees: *Kruskal*, *Prim*
+  + Single-source shortest paths: *Bellman-Ford*, *Dijkstra*
+  + All-pairs shortest paths: *Floyd-Warshall*, *Johnson*
 
 ---
 ## Outline
