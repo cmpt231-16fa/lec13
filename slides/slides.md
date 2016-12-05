@@ -19,7 +19,7 @@
 ---
 ## All-pairs shortest path
 + **Bellman-Ford** on each vertex: \`O(|V|^4)\`
-+ Dyn prog by **path length**: \`O(|V|^4)\`
++ Dyn prog by **path length**: \`O(|V|^3 log |V|)\`
 + **Floyd-Warshall** (by *subset* of *V*): \`O(|V|^3)\`
 + **Johnson** (*Dijkstra* on each vertex): \`O(|V|^2 log |V| + |V| |E|)\`
   + **Reweight** edges for positive weights
@@ -29,8 +29,8 @@
 + Johnson's trick: Add a **new** vertex *s*
   + Add **zero-weight** edges from *s* to all vertices:
     + *V'* = *V* &cup; {*s*},
-    + *E'* = *E* &cup; {*(s,v)*: *v* &in; *V*},
-    + *w(s,v)* = 0 &forall; *v*
+    + *E'* = *E* &cup; {*(s,v)*: *v* &in; *V*}, and
+      *w(s,v)* = 0 &forall; *v*
   + **Compute** *&delta;(s,v)* &forall; *v* (e.g., with Bellman-Ford)
   + **Reweight** edges using *h(v)* = *&delta;(s,v)*
 
@@ -69,8 +69,9 @@ def Johnson( G, w ):
 + **Floyd-Warshall**: \`O(|V|^3)\`
   + Dyn prog by **subset** of vertices for intermediate nodes
 + **Johnson**: \`O(|V|^2 log |V| + |V||E|)\`
-  + **Bellman Ford** from new source
+  + **Bellman Ford** from new source *s*
   + **Reweight**: *h(v)* = *&delta;(s,v)*
+    and *w'(u,v)* = *w(u,v)* + *h(u)* - *h(v)*
   + Run **Dijkstra** from each vertex
 
 ---
@@ -78,13 +79,14 @@ def Johnson( G, w ):
 
 ---
 ## Decision problems
-+ Phrase problem as yes/no **decision**: **input** is a string *s*,
++ Phrase problem as yes/no **decision**:
+  + **input** is a string *s*,
   + **Problem** is a set of strings *X*,
-  + **Algorithm** *A* returns boolean: \`A(s) = T iff s in X\`
+  + **Algorithm** *A* returns boolean: \`A(s) = TRUE iff s in X\`
 + **Complexity** of *A* in terms of **length** *n* of *s*
 + e.g., given graph *(V, E, w)*, is there a **path** of weight &le; 4
   between nodes *u* and *v*?
-  + **Input** *s* includes entire graph spec, "4", and *u* + *v*
+  + **Input** *s* includes entire *graph* spec, "*4*", *u*, and *v*
   + Floyd-Warshall: \`O(|V|^3) = O(n^3)\`
 + e.g., given an integer *j*, is it **prime**?
   + Writing *j* out, **length** of input is \`n=log j\`
