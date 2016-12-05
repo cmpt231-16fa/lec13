@@ -110,15 +110,13 @@ def Johnson( G, w ):
 
 ---
 ## Semester overview
-+ **Complexity**, &Theta; O &Omega; o &omega;
++ **Complexity**, &Theta; O &Omega; o &omega;, recurrence, induction
   *(ch1-5)*
-  + Recurrences, induction
 + **Sorting** *(ch4-8)*
   + Comparison sorts: insert, merge, heap, quick
   + Linear sorts: counting, radix, bucket
 + **Data Structures** *(ch10-12,18)*
-  + Hash tables
-  + Linked lists, BSTs, B-trees
+  + Hash tables, linked lists, BSTs, B-trees
 + **Divide and Conquer** *(ch15-16)*
   + Dynamic prog: rod cut, matrix-chain, LCS, opt BST
   + Greedy: act sel, list merge, Huffman, frac knapsack
