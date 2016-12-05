@@ -65,38 +65,73 @@ def Johnson( G, w ):
 
 ---
 ## All-pairs shortest path: summary
++ **Negative** edges allowed (but not net-negative *cycles*)
++ **Floyd-Warshall**: \`O(|V|^3)\`
+  + Dyn prog by **subset** of vertices for intermediate nodes
++ **Johnson**: \`O(|V|^2 log |V| + |V||E|)\`
+  + **Bellman Ford** from new source
+  + **Reweight**: *h(v)* = *&delta;(s,v)*
+  + Run **Dijkstra** from each vertex
 
 ---
 ## Outline
 
 ---
+## Decision problems
++ Phrase problem as yes/no **decision**: **input** is a string *s*,
+  + **Problem** is a set of strings *X*,
+  + **Algorithm** *A* returns boolean: \`A(s) = T iff s in X\`
++ **Complexity** of *A* in terms of **length** *n* of *s*
++ e.g., given graph *(V, E, w)*, is there a **path** of weight &le; 4
+  between nodes *u* and *v*?
+  + **Input** *s* includes entire graph spec, "4", and *u* + *v*
+  + Floyd-Warshall: \`O(|V|^3) = O(n^3)\`
++ e.g., given an integer *j*, is it **prime**?
+  + Writing *j* out, **length** of input is \`n=log j\`
+  + Lenstra-Pomerance [AKS](https://en.wikipedia.org/wiki/AKS_primality_test)
+    algorithm (2011): \`O(n^6 log^k n)\`
+    + roughly **polynomial** in length of input
+
+---
 ## Complexity classes
-+ Decision problems
-+ *P*:
-+ *EXP*:
-+ *R*:
++ *P*: decision problems for which **polynomial-time** algorithms exist
+  + Most of the algorithms in this course! \`O(n^c)\`
++ *EXP*: problems solvable in **exponential** time: \`O(2^(n^c))\`
++ *R*: problems solvable in **finite** time
+  + R = "**recursive**" (Turing 1936, Church 1941)
+
+![P, EXP, and R](static/img/P-EXP-R.svg)
 
 ---
 ## Examples
++ Does a weighted graph have a **net-negative cycle**?
+  + In **P**: *Bellman-Ford* \`O(|V||E|) = O(n^2)\`
++ Given a **chess** board configuration (n x n), can White **win**?
+  + In **EXP** but not in **P**
++ Given a **Tetris** board and sequence of pieces, can you **survive**?
+  + In **EXP** but not *known* whether in **P**
++ Given a computer **program**, does it ever **halt**?
+  + [Uncomputable](https://en.wikipedia.org/wiki/Halting_problem)! (&notin; *R*)
+  + No algorithm can solve this in *finite* time for **all** programs, for **all** inputs
 
 ---
 ## Turing machine
 + Computational model
 
 ---
-## Undecidability
-+ Halting problem
-
----
 ## NP
 + Verification algorithm
 + Nondeterministic Turing machine
+
+![NP](static/img/NP-complete.svg)
 
 ---
 ## Reductions
 
 ---
 ## NP-hard and NP-complete
+
+![NP complete](static/img/NP-complete.svg)
 
 ---
 ## P =? NP
