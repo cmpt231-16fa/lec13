@@ -265,12 +265,11 @@ Koan( Koan )
 ---
 ## Examples of NP-complete
 + Boolean **satisfiability**
-  [3-SAT](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem)
-+ **Travelling salesman**
-  [TSP](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
-+ 0-1
-  [knapsack](https://en.wikipedia.org/wiki/Knapsack_problem#Computational_complexity)
-  (pseudo-poly)
+  [(3-SAT)](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem),
+  **Travelling salesman**
+  [(TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+  + (pseudo-poly): 0-1
+    [knapsack](https://en.wikipedia.org/wiki/Knapsack_problem#Computational_complexity)
 + 3-[partition](https://en.wikipedia.org/wiki/3-partition_problem):
   given *n* integers, can you split into *triples* of *equal* sum?
 + 3-[colouring](https://en.wikipedia.org/wiki/Graph_coloring#Computational_complexity)
@@ -284,7 +283,11 @@ Koan( Koan )
   integers is *NP* but **unknown** if *NP-hard*
 + **Chess** (generalised to *n* x *n*) is *EXP-complete*
   + More games: [UC Irvine](https://www.ics.uci.edu/~eppstein/cgt/hard.html)
-+ [MIT 6.890: Fun with Hardness Proofs](http://courses.csail.mit.edu/6.890/fall14/)
++ **Protein** folding, urban **traffic flow** equilibrium,
+  optimal **meshing** for [FEM](https://en.wikipedia.org/wiki/Finite_element_method), max **social welfare** in Nash equilib, and *many* more!
++ Foundational **textbook**: Garey + Johnson,
+  ["Computers and Intractability"](https://en.wikipedia.org/wiki/Computers_and_Intractability) (1979)
+  + [MIT 6.890: Fun with Hardness Proofs](http://courses.csail.mit.edu/6.890/fall14/)
 
 ---
 <!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
