@@ -125,6 +125,21 @@ def Johnson( G, w ):
     + roughly **polynomial** in length of input
 
 ---
+## Turing machine model
++ General model of **computation**
++ Infinite **tape** using finite **symbol** set (plus *blank*)
++ Machine has a **head** that can *read*, *write*, and *move* left/right
++ Machine has a **state space** and **transitions**:
+  + Instructions for when to **change** internal states
+  + **Program** code (finite)
+
+<div class="imgbox"><div>
+![Alan Turing](static/img/alan-turing.jpg)
+</div><div>
+![Turing machine](static/img/turing-machine-2.png)
+</div></div>
+
+---
 ## Complexity classes
 + *P*: decision problems for which **polynomial-time** algorithms exist
   + **Most** of the algorithms in this course! \`O(n^c)\`
@@ -182,10 +197,19 @@ Koan( Koan )
 
 ---
 ## NP
-+ Verification algorithm
-+ Nondeterministic Turing machine
-
-![NP](static/img/NP-complete.svg)
++ **Certification** algorithm: instead of saying whether *s* &in; *X*,
+  + Checks a proposed **proof** that *s* &in; *X*:
++ *C(s,t)* is a **certifier** for problem *X* if for every *s*:
+  + *s* &in; *X* &hArr; &exist; **certificate** *t* such that *C(s,t)* = TRUE
++ **NP** (nondeterministic polynomial): set of problems *X* <br/>
+  which have a **polynomial**-time **certifier**:
+  + *C(s,t)* runs in polynomial time
+  + Certificate *t* is of polynomial size: *|t|* &in; O(*|s|^c*)
++ **Nondeterministic** Turing machine:
+  + Can make lucky **guesses** of *t* and **check** in polynomial time
+  + Will find a **valid** *t* (if exists) in polynomial num of guesses
++ **P** &sube; **NP** &sube; **EXP**
+  + For any **NP** problem, can try every string *t* of |t| &lt; n
 
 ---
 ## Reductions
