@@ -5,18 +5,18 @@
 ---
 ## [1 Corinthians 1:18-21](http://www.esvbible.org/1%20Corinthians+1/) <span class="ref">(ESV)</span>
 For the word of the **cross**
-is **folly** to those who are perishing,
+is **folly** to those who are perishing, <br/>
 but to us who are being saved it is the **power** of God.
 
 <span class="ref">19</span>
 For it is written,
-“I will destroy the **wisdom** of the wise,
+“I will destroy the **wisdom** of the wise, <br/>
 and the **discernment** of the discerning I will thwart.”
 
 <span class="ref">20</span>
 Where is the one who is **wise**?
-Where is the **scribe**?
-Where is the **debater** of this age?
+Where is the **scribe**? <br/>
+Where is the **debater** of this age? <br/>
 Has not God made **foolish** the wisdom of the world? 
  
 >>>
