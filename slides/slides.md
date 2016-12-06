@@ -142,6 +142,7 @@ def Johnson( G, w ):
 ---
 ## Complexity classes
 + *P*: decision problems for which **polynomial-time** algorithms exist
+  ("*tractable*")
   + **Most** of the algorithms in this course! \`O(n^c)\`
 + *EXP*: problems solvable in **exponential** time: \`O(2^(n^c))\`
 + *R*: problems solvable in **finite** time
@@ -237,17 +238,52 @@ Koan( Koan )
 
 ---
 ## Reductions
++ **Convert** your problem into one with a known solution
+  + **unweighted** shortest path &rarr; **weighted** shortest path:
+    + set all edge weights to 1
+  + **longest** path &rarr; **shortest** path (*negate* weights)
++ Problem *X* **reduces** (poly, Cook) to *Y*, \`X >=\_p Y\` iff:
+  + Can solve *X* using a polynomial number of **calls** to
+    a solution of *Y*, plus polynomial additional work
+  + Model of **computation** (*subroutines*)
+  + *X* is "**at least** as hard as" *Y*
++ *Tetris* (and many others) **reduces** to *3-SAT*
+  + If we can find a polynomial *3-SAT* solver (i.e., *3-SAT* &in; *P*),
+  + Then *Tetris*, *TSP*, and many other **NP** problems
+    could be solved in *P*
 
 ---
 ## NP-hard and NP-complete
++ *X* &in; **NP-hard** &hArr; \`X >=\_p Y\` for all *Y* &in; *NP*
+  + "**at least** as hard as *NP*"
++ **NP-complete** = *NP* &cap; *NP-hard*
+  + all *NP-complete* problems are "the **same**" difficulty (mod poly)
+  + If any **one** is in *P*, then they **all** are, and *P* = *NP*
 
 ![NP complete](static/img/NP-complete.svg)
 
 ---
-## P =? NP
-
----
-## For further reading
+## Examples of NP-complete
++ Boolean **satisfiability**
+  [3-SAT](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem)
++ **Travelling salesman**
+  [TSP](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
++ 0-1
+  [knapsack](https://en.wikipedia.org/wiki/Knapsack_problem#Computational_complexity)
+  (pseudo-poly)
++ 3-[partition](https://en.wikipedia.org/wiki/3-partition_problem):
+  given *n* integers, can you split into *triples* of *equal* sum?
++ 3-[colouring](https://en.wikipedia.org/wiki/Graph_coloring#Computational_complexity)
+  a given graph (no adjacent vertices share colour)
++ Find largest
+  [clique](https://en.wikipedia.org/wiki/Clique_problem#NP-completeness)
+  in a graph (fully connected subset)
++ Shortest [path](https://en.wikipedia.org/wiki/Euclidean_shortest_path)
+  in 3D avoiding **obstacles**
++ [Factoring](https://en.wikipedia.org/wiki/Integer_factorization#Difficulty_and_complexity)
+  integers is *NP* but **unknown** if *NP-hard*
++ **Chess** (generalised to *n* x *n*) is *EXP-complete*
+  + More games: [UC Irvine](https://www.ics.uci.edu/~eppstein/cgt/hard.html)
 + [MIT 6.890: Fun with Hardness Proofs](http://courses.csail.mit.edu/6.890/fall14/)
 
 ---
