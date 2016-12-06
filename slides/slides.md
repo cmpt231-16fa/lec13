@@ -126,15 +126,17 @@ def Johnson( G, w ):
 ## Turing machine model
 + General model of **computation**
 + Infinite **tape** using finite **symbol** set (plus *blank*)
-+ Machine has a **head** that can *read*, *write*, and *move* left/right
++ **Head** can *read*, *write*, and *move* left/right
 + Machine has a **state space** and **transitions**:
   + Instructions for when to **change** internal states
   + **Program** code (finite)
 
 <div class="imgbox"><div>
 ![Alan Turing](static/img/alan-turing.jpg)
+<!-- .element: style="width:70%" -->
 </div><div>
 ![Turing machine](static/img/turing-machine-2.png)
+<!-- .element: style="width:70%" -->
 </div></div>
 
 ---
@@ -222,7 +224,6 @@ Koan( Koan )
     + Each **clause** is an **OR** of up to *3* Boolean variables
     + CNF **formula** is an **AND** of all clauses
   + Is there an **input** of \`{x\_i}\` that makes the formula *TRUE*?
-  + Easy to **check** a given input, but hard to **find**
 
 ---
 ## P vs NP
@@ -247,7 +248,7 @@ Koan( Koan )
 + *Tetris* (and many others) **reduces** to *3-SAT*
   + If we can find a polynomial *3-SAT* solver (i.e., *3-SAT* &in; *P*),
   + Then *Tetris*, *TSP*, and many other **NP** problems
-    could be solved in *P*
+    would be *P*
 
 ---
 ## NP-hard and NP-complete
