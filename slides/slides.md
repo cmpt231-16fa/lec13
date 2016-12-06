@@ -98,9 +98,9 @@ def Johnson( G, w ):
 ---
 ## Decision problems
 + Phrase problem as yes/no **decision**:
-  + **input** is a string *s*,
-  + **Problem** is a set of strings *X*,
-  + **Algorithm** *A* returns boolean: \`A(s) = TRUE iff s in X\`
+  + **Input**: a string *s* (e.g., encoded in binary)
+  + **Problem**: a set of strings *X*
+  + **Algorithm** *A* returns boolean: \`A(s) = true iff s in X\`
 + **Complexity** of *A* in terms of **length** *n* of *s*
 + e.g., given graph *(V, E, w)*, is there a **path** of weight &le; 4
   between nodes *u* and *v*?
