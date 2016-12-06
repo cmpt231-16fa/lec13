@@ -119,7 +119,7 @@ def Johnson( G, w ):
 + e.g., given an integer *j*, is it **prime**?
   + Writing *j* out, **length** of input is \`n=log j\`
   + Lenstra-Pomerance [AKS](https://en.wikipedia.org/wiki/AKS_primality_test)
-    algorithm (2011): \`O(n^6 log^k n)\`: **polynomial**
+    alg (2011): \`O(n^6 log^k n)\`: **polynomial**
 
 ---
 ## Turing machine model
@@ -283,7 +283,7 @@ Koan( Koan )
   optimal **meshing** for
   [FEM](https://en.wikipedia.org/wiki/Finite_element_method),
   max **social welfare** in Nash equilib, ...
-+ Foundational **textbook**: Garey + Johnson,
++ Foundational **textbook**: Garey + Johnson, <br/>
   ["Computers and Intractability"](https://en.wikipedia.org/wiki/Computers_and_Intractability) (1979)
   + [MIT 6.890: Fun with Hardness Proofs](http://courses.csail.mit.edu/6.890/fall14/)
 
