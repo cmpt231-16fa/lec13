@@ -112,24 +112,22 @@ def Johnson( G, w ):
   + **Problem**: a set of strings *X*
   + **Algorithm** *A* returns boolean: \`A(s) = true iff s in X\`
 + **Complexity** of *A* in terms of **length** *n* of *s*
-+ e.g., given graph *(V, E, w)*, is there a **path** of weight &le; 4
++ e.g., given graph *(V, E, w)*, is there a **path** of weight &le; *4*
   between nodes *u* and *v*?
   + **Input** *s* includes entire *graph* spec, "*4*", *u*, and *v*
-  + Floyd-Warshall: \`O(|V|^3) = O(n^3)\`
+  + *Floyd-Warshall*: \`O(|V|^3) = O(n^3)\`
 + e.g., given an integer *j*, is it **prime**?
   + Writing *j* out, **length** of input is \`n=log j\`
   + Lenstra-Pomerance [AKS](https://en.wikipedia.org/wiki/AKS_primality_test)
-    algorithm (2011): \`O(n^6 log^k n)\`
-    + roughly **polynomial** in length of input
+    algorithm (2011): \`O(n^6 log^k n)\`: **polynomial**
 
 ---
 ## Turing machine model
 + General model of **computation**
-+ Infinite **tape** using finite **symbol** set (plus *blank*)
++ *Infinite* **tape** using *finite* **symbol** set (plus *blank*)
 + **Head** can *read*, *write*, and *move* left/right
-+ Machine has a **state space** and **transitions**:
++ Machine has a *finite* **state space** and **transitions**:
   + Instructions for when to **change** internal states
-  + **Program** code (finite)
 
 <div class="imgbox"><div>
 ![Alan Turing](static/img/alan-turing.jpg)
@@ -158,7 +156,8 @@ def Johnson( G, w ):
   + In *EXP* (exhaustive search) but **not** in *P*
 + Given a **Tetris** board + seq of pieces, can you **survive**?
   + In *EXP* but not **known** whether in *P*
-+ Given a computer **program**, does it ever **halt**?
++ Given a computer **program** and **input**, does it **halt**?
+  + Automated **infinite loop** checker
   + [Uncomputable](https://en.wikipedia.org/wiki/Halting_problem)! (&notin; *R*)
   + **Cannot** solve in *finite* time for **all** programs, for **all** inputs
 
@@ -166,7 +165,7 @@ def Johnson( G, w ):
 ## Halting problem
 + Assume *Halt(P, s)* solves the **halting problem**:
   + Input two strings: a **program** *P* and an **input** *s* to *P*
-  + Output: *TRUE* iff *P(s)* ever **halts**
+  + Outputs *TRUE* &hArr; *P(s)* **halts**
 + Now, consider the following **program**:
 
 ```
@@ -176,13 +175,12 @@ def Koan( X ):
 Koan( Koan )
 ```
 
-+ Case 1: *Koan( Koan )* **halts**.
-  + &rArr; *Halt( Koan, Koan )* = TRUE (by correctness of *Halt*)
-  + &rArr; *Koan( Koan )* loops forever (by code of *Koan*)
-+ Case 2: *Koan( Koan )* **doesn't** halt.
-  + &rArr; *Halt( Koan, Koan )* = FALSE (by correctness of *Halt*)
-  + &rArr; *Koan( Koan )* halts (by code of *Koan*)
-+ Either case results in a **contradiction**!
++ Case 1: *Koan*( *Koan* ) **halts**.
+  + &rArr; *Halt*( *Koan*, *Koan* ) = TRUE (by correctness of *Halt*)
+  + &rArr; *Koan*( *Koan* ) loops forever (by code of *Koan*)
++ Case 2: *Koan*( *Koan* ) **doesn't** halt.
+  + &rArr; *Halt*( *Koan*, *Koan* ) = FALSE (by correctness of *Halt*)
+  + &rArr; *Koan*( *Koan* ) halts (by code of *Koan*)
 
 ---
 <!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
@@ -198,13 +196,13 @@ Koan( Koan )
 ---
 ## NP
 + **Certification** algorithm: instead of saying whether *s* &in; *X*,
-  + Checks a proposed **proof** that *s* &in; *X*:
+  + Check a proposed **proof** *t* that *s* &in; *X*:
 + *C(s,t)* is a **certifier** for problem *X* if for every *s*:
   + *s* &in; *X* &hArr; &exist; **certificate** *t* such that *C(s,t)* = TRUE
-+ **NP** (nondeterministic polynomial): set of problems *X* <br/>
++ **NP** (nondeterministic polynomial): all problems *X* <br/>
   which have a **polynomial**-time **certifier**:
   + *C(s,t)* runs in polynomial time
-  + Certificate *t* is of polynomial size: *|t|* &in; O(*|s|^c*)
+  + Certificate *t* is of polynomial size: \`|t| in O(|s|^c)\`
 + **Nondeterministic** Turing machine:
   + Can make lucky **guesses** of *t* and **check** in polynomial time
   + Will find a **valid** *t* (if exists) in polynomial num of guesses
@@ -220,7 +218,7 @@ Koan( Koan )
   + **Decision** version: is min weight &le; *x*?
 + **Satisfiability** (*3-SAT*):
   + Boolean formula in **conjunctive normal form** (*CNF*):
-    + \`(x\_1 or x\_2 or x\_3) and (x\_4 or x\_5 or x\_6) and ...\`
+    + \`(x\_1 or x\_2 or x\_3) and (x\_4 or x\_5 or x\_6) and (x\_7 or x\_8) ...\`
     + Each **clause** is an **OR** of up to *3* Boolean variables
     + CNF **formula** is an **AND** of all clauses
   + Is there an **input** of \`{x\_i}\` that makes the formula *TRUE*?
@@ -230,7 +228,9 @@ Koan( Koan )
 + **P** &sube; **NP** &sube; **EXP**
   + For any *P* problem, can **solve** &rArr; can find **certificate** *t*
   + For any *NP* problem, can try **every string** *t* with *|t| &lt; n*
-+ Million-dollar question (Clay prize): **P =? NP**
++ Million-dollar question
+  [(Clay prize)](http://www.claymath.org/millennium-problems/p-vs-np-problem):
+  **P =? NP**
   + Is it easier to **check** a proof than **construct** one?
   + Can't "*engineer luck*"
 
@@ -238,9 +238,10 @@ Koan( Koan )
 ## Reductions
 + **Convert** your problem into one with a known solution
   + **unweighted** shortest path &rarr; **weighted** shortest path:
-    + set all edge weights to 1
+    + set all *edge weights* to 1
   + **longest** path &rarr; **shortest** path (*negate* weights)
-+ Problem *X* **reduces** (poly, Cook) to *Y*, \`X >=\_p Y\` iff:
++ Problem *X* **reduces** <span class="ref">(poly, Cook)</span>
+  to *Y*, \`(X >=\_p Y)\` iff:
   + Can solve *X* using a polynomial number of **calls** to
     a solution of *Y*, plus polynomial additional work
   + Model of **computation** (*subroutines*)
@@ -262,16 +263,13 @@ Koan( Koan )
 
 ---
 ## Examples of NP-complete
-+ Boolean **satisfiability**
-  [(3-SAT)](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem),
-  **Travelling salesman**
-  [(TSP)](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
-  + (pseudo-poly): 0-1
-    [knapsack](https://en.wikipedia.org/wiki/Knapsack_problem#Computational_complexity)
++ [3-SAT](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem),
+  [TSP](https://en.wikipedia.org/wiki/Travelling_salesman_problem),
+  0-1 [knapsack](https://en.wikipedia.org/wiki/Knapsack_problem#Computational_complexity) (pseudo-poly)
 + 3-[partition](https://en.wikipedia.org/wiki/3-partition_problem):
-  given *n* integers, can you split into *triples* of *equal* sum?
+  split *n* integers into *triples* of *equal* sum?
 + 3-[colouring](https://en.wikipedia.org/wiki/Graph_coloring#Computational_complexity)
-  a given graph (no adjacent vertices share colour)
+  of graphs (no adj nodes share colour)
 + Find largest
   [clique](https://en.wikipedia.org/wiki/Clique_problem#NP-completeness)
   in a graph (fully connected subset)
@@ -279,10 +277,12 @@ Koan( Koan )
   in 3D avoiding **obstacles**
 + [Factoring](https://en.wikipedia.org/wiki/Integer_factorization#Difficulty_and_complexity)
   integers is *NP* but **unknown** if *NP-hard*
-+ **Chess** (generalised to *n* x *n*) is *EXP-complete*
-  + More games: [UC Irvine](https://www.ics.uci.edu/~eppstein/cgt/hard.html)
++ [Chess](https://www.ics.uci.edu/~eppstein/cgt/hard.html)
+  (generalised to *n* x *n*) is *EXP-complete*
 + **Protein** folding, urban **traffic flow** equilibrium,
-  optimal **meshing** for [FEM](https://en.wikipedia.org/wiki/Finite_element_method), max **social welfare** in Nash equilib, and *many* more!
+  optimal **meshing** for
+  [FEM](https://en.wikipedia.org/wiki/Finite_element_method),
+  max **social welfare** in Nash equilib, ...
 + Foundational **textbook**: Garey + Johnson,
   ["Computers and Intractability"](https://en.wikipedia.org/wiki/Computers_and_Intractability) (1979)
   + [MIT 6.890: Fun with Hardness Proofs](http://courses.csail.mit.edu/6.890/fall14/)
