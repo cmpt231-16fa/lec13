@@ -38,7 +38,7 @@ Has not God made **foolish** the wisdom of the world?
 
 ---
 ## All-pairs shortest path
-+ **Bellman-Ford** on each vertex: \`O(|V|^4)\`
++ **Bellman-Ford** on each vertex: \`O(|V|^2 |E|)\`
 + Dyn prog by **path length**: \`O(|V|^3 log |V|)\`
 + **Floyd-Warshall** (by *subset* of *V*): \`O(|V|^3)\`
 + **Johnson** (*Dijkstra* on each vertex): \`O(|V|^2 log |V| + |V| |E|)\`
