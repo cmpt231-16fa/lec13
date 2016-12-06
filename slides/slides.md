@@ -344,7 +344,7 @@ Koan( Koan )
   + **Dynamic** programming by *path length*: \`O(|V|^4)\`
   + **Exponential** speedup: \`O(|V|^3 log |V|)\`
   + **Floyd-Warshall** (dyn prog by *vertex subset*): \`O(|V|^3)\`
-  + **Johnson** (iterative Dijkstra): \`O(|V|^2 log |V| + |V||E|)\`
+  + **Johnson** (iterative *Dijkstra*): \`O(|V|^2 log |V| + |V||E|)\`
 
 ---
 <!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
