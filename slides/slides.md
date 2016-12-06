@@ -25,14 +25,14 @@ Has not God made **foolish** the wisdom of the world?
 
 ---
 ## Outline for today
-+ All-pairs shortest path
-  + Johnson (reweighted Dijkstra): \`O(|V|^2 log |V| + |V| |E|)\`
-+ Tractability
-  + Complexity classes: *P*, *EXP*, *R*
-  + Non-deterministic verification: *NP*
-  + Reductions
-  + NP-hard and NP-complete
-+ Semester review
++ **All-pairs** shortest path
+  + *Johnson* (reweighted Dijkstra): \`O(|V|^2 log |V| + |V| |E|)\`
++ **Tractability**
+  + Complexity **classes**: *P*, *EXP*, *R*
+  + **Non-deterministic** verification: *NP*
+  + **Reductions**
+  + NP-**hard** and NP-**complete**
++ Semester **review**
 
 ---
 ## All-pairs shortest path
@@ -93,7 +93,15 @@ def Johnson( G, w ):
   + Run **Dijkstra** from each vertex
 
 ---
-## Outline
+## Outline for today
++ All-pairs shortest path
+  + Johnson (reweighted Dijkstra): \`O(|V|^2 log |V| + |V| |E|)\`
++ **Tractability**
+  + **Complexity classes:** *P*, *EXP*, *R*
+  + Non-deterministic verification: *NP*
+  + Reductions
+  + NP-hard and NP-complete
++ Semester review
 
 ---
 ## Decision problems
@@ -125,21 +133,21 @@ def Johnson( G, w ):
 ---
 ## Examples
 + Does a weighted graph have a **net-negative cycle**?
-  + In **P**: e.g., *Bellman-Ford* \`O(|V||E|) = O(n^2)\`
+  + In *P*: e.g., *Bellman-Ford* \`O(|V||E|) = O(n^2)\`
 + Given a **chess** board configuration (n x n), can White **win**?
-  + In **EXP** (exhaustive search) but not in **P**
+  + In *EXP* (exhaustive search) but **not** in *P*
 + Given a **Tetris** board + seq of pieces, can you **survive**?
-  + In **EXP** but not *known* whether in **P**
+  + In *EXP* but not **known** whether in *P*
 + Given a computer **program**, does it ever **halt**?
   + [Uncomputable](https://en.wikipedia.org/wiki/Halting_problem)! (&notin; *R*)
-  + **No** algorithm can solve this in *finite* time for **all** programs, for **all** inputs
+  + **Cannot** solve in *finite* time for **all** programs, for **all** inputs
 
 ---
 ## Halting problem
-+ A solution to the **halting problem** would be a function *Halt(P, s)*
++ Assume *Halt(P, s)* solves the **halting problem**:
   + Input two strings: a **program** *P* and an **input** *s* to *P*
   + Output: *TRUE* iff *P(s)* ever **halts**
-+ If such a solution **existed** (and ran in finite time), then consider
++ Now, consider the following **program**:
 
 ```
 def Koan( X ):
@@ -157,8 +165,15 @@ Koan( Koan )
 + Either case results in a **contradiction**!
 
 ---
-## Turing machine
-+ Computational model
+## Outline for today
++ All-pairs shortest path
+  + Johnson (reweighted Dijkstra): \`O(|V|^2 log |V| + |V| |E|)\`
++ Tractability
+  + Complexity classes: *P*, *EXP*, *R*
+  + **Non-deterministic verification:** *NP*
+  + **Reductions**
+  + **NP-hard and NP-complete**
++ Semester review
 
 ---
 ## NP
@@ -183,7 +198,15 @@ Koan( Koan )
 + [MIT 6.890: Fun with Hardness Proofs](http://courses.csail.mit.edu/6.890/fall14/)
 
 ---
-## Outline
+## Outline for today
++ All-pairs shortest path
+  + Johnson (reweighted Dijkstra): \`O(|V|^2 log |V| + |V| |E|)\`
++ Tractability
+  + Complexity classes: *P*, *EXP*, *R*
+  + Non-deterministic verification: *NP*
+  + Reductions
+  + NP-hard and NP-complete
++ **Semester review**
 
 ---
 ## Semester overview
@@ -203,6 +226,129 @@ Koan( Koan )
   + All-pairs shortest paths: *Floyd-Warshall*, *Johnson*
 
 ---
-## Outline
+## Lecture 1: ch1-3
++ **Insertion** sort and its **analysis**
++ Discrete **math** review
+  + **Logic** and proofs
+  + Monotonicity, limits, iterated functions
+  + **Fibonacci** sequence and golden ratio
+  + Factorials and **Stirling's** approximation
++ **Asymptotic** notation: &Theta;, O, &Omega;, o, &omega;
+  + **Proving** asymptotic bounds
+
+---
+## Lecture 2: ch4-5
++ **Divide and conquer** *(ch4)*
+  + **Merge** sort and its **analysis**
+  + Recursion trees + proof by **induction**
+  + Maximum **subarray**
+  + Matrix multiply vs **Strassen**'s method
+  + **Master method** of solving recurrences
++ **Probabilistic Analysis** *(ch5)*
+  + **Hiring** problem and analysis
+  + **Randomised** algorithms and PRNGs
+
+---
+## Lecture 3: ch6-7
++ **Heapsort** *(ch6)* :
+  + Trees, binary **heaps**, **max-heap** property
+  + **Heapify()** function on a node
+  + **Heapsort**: build a max-heap, use it for sorting
+  + **Priority queue** using max-heap: operations, complexity
++ **Quicksort** *(ch7)* :
+  + Regular quicksort with **fixed** (Lomuto) partitioning
+  + **Randomised** pivot
+  + Analysis of randomised pivot: **expected** time
++ **Vegas**-style vs **Monte-Carlo** style probabilistic algo
+  + Monte-Carlo **matrix multiply** checking
+
+---
+## Lecture 4: ch8,11
++ **Linear**-time sorts *(ch8)* (**assumptions!**)
+  + **Decision-tree** model, why comparison sorts are *&Omega;(n lg n)*
+  + **Counting** sort: census + move: *&Theta;(n+k)*, **stability**
+  + **Radix** sort (with *r* -bit digits): *&Theta;(d(n+k))*
+  + **Bucket** sort: *&Theta;(n)* **expected** time
++ **Hash** tables *(ch11)*:
+  + Hash **function**, hash **collisions**, **chaining**
+  + **Load factor** *&alpha;* = *n*/*num\_buckets*
+  + **Search** in *&Theta;(1+&alpha;)*
+  + **Hashes**: div, mul, universal hashing
+  + **Open addressing**: linear, quad, double-hash
+
+---
+## Lecture 5-6: ch10,12,18
++ **Linked lists** *(ch10)*:
+  + Singly/**doubly**-linked, **circular**
++ **Stacks** and **queues** *(ch10)*:
+  + Operations, implementation with linked-lists
++ **Trees** and Binary search trees (**BST**) *(ch12)*:
+  + Tree **traversals**: inorder, preorder, postorder
+  + **Search**, **Min**/max and **successor**/pred
+  + **Insert** and **delete**
+  + **Randomised** BST
++ **Skip lists**: implementation, complexity
++ **B-Trees** *(ch18)*
+  + **Search** / **insert** / **delete** in \`O(t log\_t n)\`
+
+---
+## Lecture 8: ch15
++ **Dynamic programming**
+  + **Rod-cutting** problem
+  + Proving optimal **substructure**
+  + Recursive, top-down, **bottom-up** solutions
++ **Fibonacci** sequence
++ **Matrix-chain** multiplication
++ Longest common **subsequence**
++ Shortest unweighted **path**
++ Optimal **binary search tree**
+
+---
+## Lecture 9: ch16
++ **Greedy** algorithms
+  + Proving optimal *substructure*
+  + Proving *greedy property*
++ **Activity selection** problem
++ **List merging** problem
++ **Huffman** coding
++ **Knapsack** problem: *fractional* and *0-1*
++ Optimal offline **caching**
+
+---
+## Lecture 10: ch22
++ **Graph** representation:
+  + Edge list, *adjacency list*, adjacency matrix
++ **Breadth-first** graph traversal
++ **Depth-first** graph traversal
+  + **Parenthesis** structure
+  + Edge **classification**
+  + Topological **sort**
+  + Finding **strongly-connected** components
+
+---
+## Lecture 11-12: ch23-25
++ **Minimum spanning tree** (*MST*)
+  + **Kruskal** (*disjoint-set forest*): \`O(|E| log |E|)\`
+  + **Prim** (*priority queue*): \`O(|V| log |V| + |E|)\`
++ **Single-source** shortest paths
+  + **Bellman-Ford**: \`O(|V| |E|)\`
+  + Special case for **DAG** (*no cycles*)
+  + **Dijkstra** (*weights &ge; 0*): \`O(|V| log |V| + |E|)\`
++ **All-pairs** shortest paths
+  + **Dynamic** programming by *path length*: \`O(|V|^4)\`
+  + **Exponential** speedup: \`O(|V|^3 log |V|)\`
+  + **Floyd-Warshall** (dyn prog by *vertex subset*): \`O(|V|^3)\`
+  + **Johnson** (iterative Dijkstra): \`O(|V|^2 log |V| + |V||E|)\`
+
+---
+## Outline for today
++ **All-pairs** shortest path
+  + *Johnson* (reweighted Dijkstra): \`O(|V|^2 log |V| + |V| |E|)\`
++ **Tractability**
+  + Complexity **classes**: *P*, *EXP*, *R*
+  + **Non-deterministic** verification: *NP*
+  + **Reductions**
+  + NP-**hard** and NP-**complete**
++ Semester **review**
 
 ---
