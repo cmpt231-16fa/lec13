@@ -17,7 +17,7 @@ and the **discernment** of the discerning I will thwart.”
 Where is the one who is **wise**?
 Where is the **scribe**? <br/>
 Where is the **debater** of this age? <br/>
-Has not God made **foolish** the wisdom of the world? 
+Has not God made **foolish** the wisdom of the world?
  
 >>>
 + foolishness of God wiser than man's wisdom
@@ -133,6 +133,28 @@ def Johnson( G, w ):
 + Given a computer **program**, does it ever **halt**?
   + [Uncomputable](https://en.wikipedia.org/wiki/Halting_problem)! (&notin; *R*)
   + **No** algorithm can solve this in *finite* time for **all** programs, for **all** inputs
+
+---
+## Halting problem
++ A solution to the **halting problem** would be a function *Halt(P, s)*
+  + Input two strings: a **program** *P* and an **input** *s* to *P*
+  + Output: *TRUE* iff *P(s)* ever **halts**
++ If such a solution **existed** (and ran in finite time), then consider
+
+```
+def Koan( X ):
+  if Halt( X, X ):
+    loop forever
+Koan( Koan )
+```
+
++ Case 1: *Koan( Koan )* **halts**.
+  + &rArr; *Halt( Koan, Koan )* = TRUE (by correctness of *Halt*)
+  + &rArr; *Koan( Koan )* loops forever (by code of *Koan*)
++ Case 2: *Koan( Koan )* **doesn't** halt.
+  + &rArr; *Halt( Koan, Koan )* = FALSE (by correctness of *Halt*)
+  + &rArr; *Koan( Koan )* halts (by code of *Koan*)
++ Either case results in a **contradiction**!
 
 ---
 ## Turing machine
