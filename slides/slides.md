@@ -1,8 +1,10 @@
+<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
 # CMPT231
 ## Lecture 13: ch34
 ### Tractability, Semester Review
 
 ---
+<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
 ## [1 Corinthians 1:18-21](http://www.esvbible.org/1%20Corinthians+1/) <span class="ref">(ESV)</span>
 For the word of the **cross**
 is **folly** to those who are perishing, <br/>
@@ -24,6 +26,7 @@ Has not God made **foolish** the wisdom of the world?
 + boast in the Lord alone
 
 ---
+<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
 ## Outline for today
 + **All-pairs** shortest path
   + *Johnson* (reweighted Dijkstra): \`O(|V|^2 log |V| + |V| |E|)\`
@@ -93,6 +96,7 @@ def Johnson( G, w ):
   + Run **Dijkstra** from each vertex
 
 ---
+<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
 ## Outline for today
 + All-pairs shortest path
   + Johnson (reweighted Dijkstra): \`O(|V|^2 log |V| + |V| |E|)\`
@@ -165,6 +169,7 @@ Koan( Koan )
 + Either case results in a **contradiction**!
 
 ---
+<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
 ## Outline for today
 + All-pairs shortest path
   + Johnson (reweighted Dijkstra): \`O(|V|^2 log |V| + |V| |E|)\`
@@ -198,6 +203,7 @@ Koan( Koan )
 + [MIT 6.890: Fun with Hardness Proofs](http://courses.csail.mit.edu/6.890/fall14/)
 
 ---
+<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
 ## Outline for today
 + All-pairs shortest path
   + Johnson (reweighted Dijkstra): \`O(|V|^2 log |V| + |V| |E|)\`
@@ -341,6 +347,7 @@ Koan( Koan )
   + **Johnson** (iterative Dijkstra): \`O(|V|^2 log |V| + |V||E|)\`
 
 ---
+<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
 ## Outline for today
 + **All-pairs** shortest path
   + *Johnson* (reweighted Dijkstra): \`O(|V|^2 log |V| + |V| |E|)\`
@@ -352,3 +359,4 @@ Koan( Koan )
 + Semester **review**
 
 ---
+<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" class="empty" -->
