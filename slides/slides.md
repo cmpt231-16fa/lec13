@@ -33,7 +33,6 @@ Has not God made **foolish** the wisdom of the world?
 + **Tractability**
   + Complexity **classes**: *P*, *EXP*, *R*
   + **Non-deterministic** verification: *NP*
-  + **Reductions**
   + NP-**hard** and NP-**complete**
 + Semester **review**
 
@@ -103,7 +102,6 @@ def Johnson( G, w ):
 + **Tractability**
   + **Complexity classes:** *P*, *EXP*, *R*
   + Non-deterministic verification: *NP*
-  + Reductions
   + NP-hard and NP-complete
 + Semester review
 
@@ -192,7 +190,6 @@ Koan( Koan )
 + Tractability
   + Complexity classes: *P*, *EXP*, *R*
   + **Non-deterministic verification:** *NP*
-  + **Reductions**
   + **NP-hard and NP-complete**
 + Semester review
 
@@ -297,7 +294,6 @@ Koan( Koan )
 + Tractability
   + Complexity classes: *P*, *EXP*, *R*
   + Non-deterministic verification: *NP*
-  + Reductions
   + NP-hard and NP-complete
 + **Semester review**
 
@@ -441,7 +437,6 @@ Koan( Koan )
 + **Tractability**
   + Complexity **classes**: *P*, *EXP*, *R*
   + **Non-deterministic** verification: *NP*
-  + **Reductions**
   + NP-**hard** and NP-**complete**
 + Semester **review**
 
