@@ -208,8 +208,32 @@ Koan( Koan )
 + **Nondeterministic** Turing machine:
   + Can make lucky **guesses** of *t* and **check** in polynomial time
   + Will find a **valid** *t* (if exists) in polynomial num of guesses
+
+---
+## Examples of NP
++ e.g., **Tetris** &in; *NP*:
+  + Given sequence of moves, can easily **check** if survive
+  + **Rules** are simple; **strategy** is hard
++ Most **games**: *checkers*, *Minesweeper*, *Sudoku*, etc.
++ **Travelling salesman** problem (*TSP*):
+  + **Shortest** path visiting **every** vertex in weighted graph
+  + **Decision** version: is min weight &le; *x*?
++ **Satisfiability** (*3-SAT*):
+  + Boolean formula in **conjunctive normal form** (*CNF*):
+    + \`(x\_1 or x\_2 or x\_3) and (x\_4 or x\_5 or x\_6) and ...\`
+    + Each **clause** is an **OR** of up to *3* Boolean variables
+    + CNF **formula** is an **AND** of all clauses
+  + Is there an **input** of \`{x\_i}\` that makes the formula *TRUE*?
+  + Easy to **check** a given input, but hard to **find**
+
+---
+## P vs NP
 + **P** &sube; **NP** &sube; **EXP**
-  + For any **NP** problem, can try every string *t* of |t| &lt; n
+  + For any *P* problem, can **solve** &rArr; can find **certificate** *t*
+  + For any *NP* problem, can try **every string** *t* with *|t| &lt; n*
++ Million-dollar question (Clay prize): **P =? NP**
+  + Is it easier to **check** a proof than **construct** one?
+  + Can't "*engineer luck*"
 
 ---
 ## Reductions
