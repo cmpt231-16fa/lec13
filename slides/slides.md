@@ -72,7 +72,7 @@ def Johnson( G, w ):
   create G' = (V', E') with new vertex s
   BellmanFord( G', w, s )                   # find dlt[ s, v ]: O(VE)
     if returned FALSE, quit                 # net-neg cycle
-  w'[ u, v ] = w[ u, v ] + dlt[ s, u ] - dlt( s, v ]
+  w'[ u, v ] = w[ u, v ] + dlt[ s, u ] - dlt[ s, v ]
   for u in V:
     Dijkstra( G, w', u )                    # find dlt'[ u, v ]: O(VlgV + E)
     for v in V:
